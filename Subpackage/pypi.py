@@ -50,6 +50,9 @@ def issue_store(med,stock):
     add_pharma(med,stock)
     print('Medicine issued succesfully!!')
 
+def demo(a,b):
+    return
+
 
     
 ##########################################################
