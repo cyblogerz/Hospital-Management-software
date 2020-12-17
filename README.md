@@ -2,7 +2,7 @@
 This is a basic hospital management software with Python via Command line
 <<<<<<< HEAD
 
-###########                           ###################                            #################
+###########                           Work in progress!! :)                           #################
            ################ ###########                 ################ #############
 
 Features:
