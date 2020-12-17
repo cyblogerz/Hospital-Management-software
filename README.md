@@ -9,12 +9,20 @@ Features:
 
 **REGISTRATION:
        Register new patient 
+
 ** Store :
       Add Stock
       Transfer Stock
+
 ** Pharmacy:
        Issue Medicine
        
 ** Billing:
       Generate bill
+      
+      
+      
+**Patient Report
+
+
        
