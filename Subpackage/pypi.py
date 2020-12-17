@@ -55,17 +55,6 @@ def issue_store(med,stock):
 ##########################################################
 print('*'*100+'\n'+'Welcome to hospital management System'.center(100,'*')+'\n'+'*'*100)
 
-def mode_chooser():
-    select=input('Press a for admin mode or press any other key for staff mode')
-    pwd='admin'
-    if select.lower() == 'a':
-        password=getpass.getpass('Enter Password for admin mode::')
-        if password == pwd:
-            return True
-        else:
-            return False
-    else:
-        return 'usr'
 
 
         
