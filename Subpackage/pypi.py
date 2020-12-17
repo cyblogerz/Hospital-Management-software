@@ -50,7 +50,7 @@ def issue_store(med,stock):
     add_pharma(med,stock)
     print('Medicine issued succesfully!!')
 
-    
+
     
 ##########################################################
 print('*'*100+'\n'+'Welcome to hospital management System'.center(100,'*')+'\n'+'*'*100)
