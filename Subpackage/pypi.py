@@ -50,14 +50,31 @@ def issue_store(med,stock):
     add_pharma(med,stock)
     print('Medicine issued succesfully!!')
 
+<<<<<<< HEAD
 def demo(a,b):
     return
 
+=======
+>>>>>>> f270611d426c80da36fb3bca97322d789a0fc2c3
 
     
 ##########################################################
 print('*'*100+'\n'+'Welcome to hospital management System'.center(100,'*')+'\n'+'*'*100)
 
+<<<<<<< HEAD
+=======
+def mode_chooser():
+    select=input('Press a for admin mode or press any other key for staff mode')
+    pwd='admin'
+    if select.lower() == 'a':
+        password=getpass.getpass('Enter Password for admin mode::')
+        if password == pwd:
+            return True
+        else:
+            return False
+    else:
+        return 'usr'
+>>>>>>> f270611d426c80da36fb3bca97322d789a0fc2c3
 
 
         
