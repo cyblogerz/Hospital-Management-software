@@ -50,13 +50,6 @@ def issue_store(med,stock):
     add_pharma(med,stock)
     print('Medicine issued succesfully!!')
 
-
-def billing(med,cfee):
-    csv=open('input.csv','w',newline='')
-    csv_writer=csv.writer(csv)
-    csv_writer.writerow(['Name:','Consulting Fee:','Medicines:','Med Fee:'])
-    
-    
     
     
 ##########################################################
