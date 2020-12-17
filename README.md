@@ -1,9 +1,13 @@
 # Hospital-Management-software
 This is a basic hospital management software with Python via Command line
-<<<<<<< HEAD
+
+!!!!!!!!!!!!!!!!This Project isn't completed yet!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 ###########                           Work in progress!! :)                           #################
            ################ ###########                 ################ #############
+           
+ Language:Python
+ Database with sqlite 3
 
 Features:
 
