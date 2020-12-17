@@ -49,8 +49,18 @@ def issue_store(med,stock):
     rem_store(med,stock)
     add_pharma(med,stock)
     print('Medicine issued succesfully!!')
-    
 
+
+def billing(med,cfee):
+    mrp=0
+    if type(med) == type([]):
+        for i in med:
+            mrp+=i.price
+    else:
+        mrp=med.price
+    return 'Name:\tPrice:\tConsultation Fee\tOverall:\n'+f'{med.name}\t{mrp}\t{cfee}\t{mrp+cfee}'
+
+            
     
 ##########################################################
 print('*'*100+'\n'+'Welcome to hospital management System'.center(100,'*')+'\n'+'*'*100)
