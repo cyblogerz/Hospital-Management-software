@@ -6,7 +6,7 @@ This is a basic hospital management software with Python via Command line
 Work in Progress>>>>>!!!!
 
 
- Language:Python
+ Language:Python<br>
  Database with sqlite 3
 
 Features:
