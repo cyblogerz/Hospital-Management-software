@@ -80,7 +80,7 @@ def ex_prompt():
     if r.lower()=='t':
         ex_prompt()
     elif r.lower()=='p':
-        continue
+        pass
     elif r.lower() == 'x':
         print("exiting...")
         return
