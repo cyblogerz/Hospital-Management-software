@@ -1,5 +1,5 @@
 # Hospital-Management-software
-This is a basic hospital management software with Python via Command line
+<h1>This is a basic hospital management software with Python via Command line</h1>
 
 !!!!!!!!!!!!!!!!This Project isn't completed yet!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
