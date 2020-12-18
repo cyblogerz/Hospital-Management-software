@@ -1,6 +1,6 @@
-import csv
+
 from database import *
-import getpass
+
 #Hello, World I am Pranav I am new to python and I am trying to build this project with my basic knowledge in Python,
 
 class Medicine:
@@ -63,51 +63,98 @@ def billing(med,cfee):
 
 
 def med_stor():
-    n=input('Enter name of medicine::')
+    n=input('Enter name of medicine(in lowercase)::')
     c=input('Enter company::')
     e=input('Enter Expiry date (in dd/mm/yy format)::')
-    p=float(input('Enter price::')
+    p=input('Enter price::')
     c=Medicine(c,e,n,p)
     return c
-
 
 def ex_prompt():
     n=input('Enter name of the medicine\n::')
     med=med_search(n)
     stock=int(input('Enter stock quantity\n::')
     stock_ex(med,stock)
-    r=input("Press 't' to do again\nOr press 'p' to go back\nPress 'x' to exit::")
+    r=input("Press t to do again\nOr press p to go back\nPress x to exit::")
         
-            if r.lower()=='t':
-                ex_prompt()
-            elif r.lower()=='p':
-                continue
-            elif r.lower() == 'x':
-                print(exiting...)
-                break
+    if r.lower()=='t':
+        ex_prompt()
+    elif r.lower()=='p':
+        continue
+    elif r.lower() == 'x':
+        print(exiting...)
+        break
 
 def vstore_prompt():
     view_store()
     r=input("Press 't' to do again\nOr press 'p' to go back\nPress 'x' to exit::")
         
-            if r.lower()=='t':
-                view_store()
+    if r.lower()=='t':
+        vstore_prompt()
     
-            elif r.lower()=='p':
-                continue
-            elif r.lower() == 'x':
-                print(exiting...)
-                break
+    elif r.lower()=='p':
+        continue
+    elif r.lower() == 'x':
+        print(exiting...)
+        break
 
+def add_prompt():
+    med=med_stor()
+    stock=int(input('Enter stock quantity\n::'))
+    add_store(med,stock)
+    r=input("Press 't' to add more\nOr press 'p' to go back\nPress 'x' to exit::")
+        
+    if r.lower()=='t':
+        add_prompt()
+    elif r.lower()=='p':
+        continue
+    elif r.lower() == 'x':
+        print(exiting...)
+        break
 
+def vpharm_prompt():
+    view_pharma()
+    r=input("Press 't' to do again\nOr press 'p' to go back\nPress 'x' to exit::")
+        
+    if r.lower()=='t':
+        vstore_prompt()
+    
+    elif r.lower()=='p':
+        continue
+    elif r.lower() == 'x':
+        print(exiting...)
+        break
+
+def ipharm_prompt():
+    n=input('Enter medicine name\n::')
+    med=med_search(n)
+    stock=int(input('Enter amount::'))
+    pharma_issue(med,stock)
+
+def pr_prompt():
+    pat_list()
+    r=input("Press 't' to do again\nOr press 'p' to go back\nPress 'x' to exit::")
+        
+    if r.lower()=='t':
+        vstore_prompt()
+    
+    elif r.lower()=='p':
+        continue
+    elif r.lower() == 'x':
+        print(exiting...)
+        break
+
+def bill_prompt():
+    print('This Feature will be coming soon')
     
             
     
 ##########################################################
 print('*'*100+'\n'+'Welcome to hospital management System'.center(100,'*')+'\n'+'*'*100)
-select=input("Enter 'o' Outpatient\nEnter 's' for Managing store\nEnter 'p' for managing pharmacy\nEnter 'r' for viewing patient records Enter 'b' for billing\n::")
+
 on=True
 while on:
+    select=input("Enter 'o' Outpatient\nEnter 's' for Managing store\nEnter 'p' for managing pharmacy\nEnter 'r' for viewing patient records Enter 'b' for billing\n::")
     if select.lower() == 'o':
     register()
     elif select.lower() == 's':
@@ -115,29 +162,26 @@ while on:
         if s.lower() == 'v':
             vstore_prompt()
         elif s.lower() == 'e':
-           ex_prompt()
+            ex_prompt()
         elif s.lower() == 'a':
-            med=med_stor()
-            stock=int(input('Enter stock quantity\n::'))
-            add_store(med,stock)
-            r=input("Press 't' to add more\nOr press 'p' to go back\nPress 'x' to exit::")
-        
-            if r.lower()=='t':
-                ex_prompt()
-            elif r.lower()=='p':
-                continue
-            elif r.lower() == 'x':
-                print(exiting...)
-                break
-    
+            add_prompt()
+            
     elif select.lower() == 'p':
         s=input("Press 'v' to see current stock in pharmacy\nPress 'i' to issue medicine from pharmacy\n::")
         if s.lower() == 'v':
-            view_pharma()
+            vpharm_prompt()
         elif s.lower() == 'i':
-            med=med_input()
-            stock=int(input('Enter amount::'))
-            pharma_issue(med,stock)
+            ipharm_prompt()
+    
+    elif select.lower() == 'r':
+        pr_prompt()
+    
+    elif select.lower() == 'b':
+        bill_prompt()
+
+
+
+            
 
 
 
