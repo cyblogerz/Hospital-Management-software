@@ -93,10 +93,10 @@ def vstore_prompt():
         vstore_prompt()
     
     elif r.lower()=='p':
-        continue
+        pass
     elif r.lower() == 'x':
         print("exiting...")
-        break
+        return
 
 def add_prompt():
     med=med_stor()
@@ -107,10 +107,10 @@ def add_prompt():
     if r.lower()=='t':
         add_prompt()
     elif r.lower()=='p':
-        continue
+        pass
     elif r.lower() == 'x':
         print("exiting...")
-        break
+        return
 
 def vpharm_prompt():
     view_pharma()
@@ -120,10 +120,10 @@ def vpharm_prompt():
         vstore_prompt()
     
     elif r.lower()=='p':
-        continue
+        pass
     elif r.lower() == 'x':
         print("exiting...")
-        break
+        return
 
 def ipharm_prompt():
     n=input('Enter medicine name\n::')
@@ -139,10 +139,10 @@ def pr_prompt():
         vstore_prompt()
     
     elif r.lower()=='p':
-        continue
+        pass
     elif r.lower() == 'x':
         print("exiting...")
-        break
+        return
 
 def bill_prompt():
     print('This Feature will be coming soon')
