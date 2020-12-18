@@ -1,4 +1,5 @@
 import sqlite3
+import Subpackage.funcs
 
 def add_store(med,stock):
 	conn=sqlite3.connect('HMS.db')
@@ -136,5 +137,5 @@ def med_search(n):
 		Company+=i[1]
 		ExpiryDate+=i[2]
 		Price+=i[4]
-	med=Medicine(Company,ExpiryDate,Name,Price)
+	med=funcs.Medicine(Company,ExpiryDate,Name,Price)
 	return med

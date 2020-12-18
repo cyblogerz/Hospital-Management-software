@@ -1,5 +1,7 @@
 from Subpackage import funcs
 from Subpackage.funcs import *
+import Subpackage.database
+
 print('*'*100+'\n'+'Welcome to hospital management System'.center(100,'*')+'\n'+'*'*100)
 
 on=True
