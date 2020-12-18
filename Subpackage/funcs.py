@@ -73,7 +73,7 @@ def med_stor():
 def ex_prompt():
     n=input('Enter name of the medicine\n::')
     med=med_search(n)
-    stock=int(input('Enter stock quantity\n::')
+    stock=int(input('Enter stock quantity\n::'))
     stock_ex(med,stock)
     r=input("Press t to do again\nOr press p to go back\nPress x to exit::")
         
