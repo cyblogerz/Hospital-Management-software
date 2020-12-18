@@ -3,9 +3,9 @@ This is a basic hospital management software with Python via Command line
 
 !!!!!!!!!!!!!!!!This Project isn't completed yet!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-###########                           Work in progress!! :)                           #################
-           ################ ###########                 ################ #############
-           
+Work in Progress>>>>>!!!!
+
+
  Language:Python
  Database with sqlite 3
 
