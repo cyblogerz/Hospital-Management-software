@@ -73,30 +73,34 @@ def med_stor():
 def ex_prompt():
     n=input('Enter name of the medicine\n::')
     med=med_search(n)
-    stock=int(input('Enter stock quantity\n::')
+    stock=int(input('Enter stock quantity\n::'))
     stock_ex(med,stock)
     r=input("Press t to do again\nOr press p to go back\nPress x to exit::")
         
     if r.lower()=='t':
-        ex_prompt()
+        return ex_prompt()
     elif r.lower()=='p':
-        continue
+        #return one to continue
+        return 1
     elif r.lower() == 'x':
-        print(exiting...)
-        break
+        print("exiting...")
+        # and zero to break
+        return 0
 
 def vstore_prompt():
     view_store()
     r=input("Press 't' to do again\nOr press 'p' to go back\nPress 'x' to exit::")
         
     if r.lower()=='t':
-        vstore_prompt()
+        return vstore_prompt()
     
     elif r.lower()=='p':
-        continue
+        #return one to continue
+        return 1
     elif r.lower() == 'x':
-        print(exiting...)
-        break
+        print("exiting...")
+        # and zero to break
+        return 0
 
 def add_prompt():
     med=med_stor()
@@ -105,25 +109,29 @@ def add_prompt():
     r=input("Press 't' to add more\nOr press 'p' to go back\nPress 'x' to exit::")
         
     if r.lower()=='t':
-        add_prompt()
+        return add_prompt()
     elif r.lower()=='p':
-        continue
+        #return one to continue
+        return 1
     elif r.lower() == 'x':
-        print(exiting...)
-        break
+        print("exiting...")
+        # and zero to break
+        return 0
 
 def vpharm_prompt():
     view_pharma()
     r=input("Press 't' to do again\nOr press 'p' to go back\nPress 'x' to exit::")
         
     if r.lower()=='t':
-        vstore_prompt()
+        return vstore_prompt()
     
     elif r.lower()=='p':
-        continue
+        #return one to continue
+        return 1
     elif r.lower() == 'x':
-        print(exiting...)
-        break
+        print("exiting...")
+        # and zero to break
+        return 0
 
 def ipharm_prompt():
     n=input('Enter medicine name\n::')
@@ -136,13 +144,15 @@ def pr_prompt():
     r=input("Press 't' to do again\nOr press 'p' to go back\nPress 'x' to exit::")
         
     if r.lower()=='t':
-        vstore_prompt()
+        return vstore_prompt()
     
     elif r.lower()=='p':
-        continue
+        #return one to continue
+        return 1
     elif r.lower() == 'x':
-        print(exiting...)
-        break
+        print("exiting...")
+        # and zero to break
+        return 0
 
 def bill_prompt():
     print('This Feature will be coming soon')
@@ -156,15 +166,27 @@ on=True
 while on:
     select=input("Enter 'o' Outpatient\nEnter 's' for Managing store\nEnter 'p' for managing pharmacy\nEnter 'r' for viewing patient records Enter 'b' for billing\n::")
     if select.lower() == 'o':
-    register()
+        register()
     elif select.lower() == 's':
         s=input("Press 'v' to view current medicine stock\nPress 'e' to execute stock exchange\nPress 'a' to add medicine to store\n::")
         if s.lower() == 'v':
-            vstore_prompt()
+            res=vstore_prompt()
+            if res==1:
+                continue
+            elif res==0:
+                break
         elif s.lower() == 'e':
-            ex_prompt()
+            res = ex_prompt()
+            if res==1:
+                continue
+            elif res==0:
+                break
         elif s.lower() == 'a':
-            add_prompt()
+            res=add_prompt()
+            if res==1:
+                continue
+            elif res==0:
+                break
             
     elif select.lower() == 'p':
         s=input("Press 'v' to see current stock in pharmacy\nPress 'i' to issue medicine from pharmacy\n::")
