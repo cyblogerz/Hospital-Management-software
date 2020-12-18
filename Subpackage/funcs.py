@@ -82,7 +82,7 @@ def ex_prompt():
     elif r.lower()=='p':
         continue
     elif r.lower() == 'x':
-        print(exiting...)
+        print("exiting...")
         break
 
 def vstore_prompt():
