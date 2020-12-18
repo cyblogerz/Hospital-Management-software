@@ -156,7 +156,7 @@ on=True
 while on:
     select=input("Enter 'o' Outpatient\nEnter 's' for Managing store\nEnter 'p' for managing pharmacy\nEnter 'r' for viewing patient records Enter 'b' for billing\n::")
     if select.lower() == 'o':
-    register()
+        register()
     elif select.lower() == 's':
         s=input("Press 'v' to view current medicine stock\nPress 'e' to execute stock exchange\nPress 'a' to add medicine to store\n::")
         if s.lower() == 'v':
