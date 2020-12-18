@@ -95,7 +95,7 @@ def vstore_prompt():
     elif r.lower()=='p':
         continue
     elif r.lower() == 'x':
-        print(exiting...)
+        print("exiting...")
         break
 
 def add_prompt():
@@ -109,7 +109,7 @@ def add_prompt():
     elif r.lower()=='p':
         continue
     elif r.lower() == 'x':
-        print(exiting...)
+        print("exiting...")
         break
 
 def vpharm_prompt():
@@ -122,7 +122,7 @@ def vpharm_prompt():
     elif r.lower()=='p':
         continue
     elif r.lower() == 'x':
-        print(exiting...)
+        print("exiting...")
         break
 
 def ipharm_prompt():
@@ -141,7 +141,7 @@ def pr_prompt():
     elif r.lower()=='p':
         continue
     elif r.lower() == 'x':
-        print(exiting...)
+        print("exiting...")
         break
 
 def bill_prompt():
