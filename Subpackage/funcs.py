@@ -94,7 +94,8 @@ def ex_prompt():
 
 
 def vstore_prompt():
-    view_store()
+    s=view_store()
+    print(s)
     r = input("Press 't' to do again\nOr press 'p' to go back\nPress 'x' to exit::")
 
     if r.lower() == 't':
@@ -127,11 +128,12 @@ def add_prompt():
 
 
 def vpharm_prompt():
-    view_pharma()
+    v=view_pharma()
+    print(v)
     r = input("Press 't' to do again\nOr press 'p' to go back\nPress 'x' to exit::")
 
     if r.lower() == 't':
-        return vstore_prompt()
+        return vpharm_prompt()
 
     elif r.lower() == 'p':
         # return one to continue
@@ -147,15 +149,28 @@ def ipharm_prompt():
     med = med_search(n)
     stock = int(input('Enter amount::'))
     pharma_issue(med, stock)
-
-
-def pr_prompt():
-    pat_list()
-
     r = input("Press 't' to do again\nOr press 'p' to go back\nPress 'x' to exit::")
 
     if r.lower() == 't':
-        return vstore_prompt()
+        return ipharm_prompt()
+
+    elif r.lower() == 'p':
+        # return one to continue
+        return 1
+    elif r.lower() == 'x':
+        print("exiting...")
+        # and zero to break
+        return 0
+
+
+def pr_prompt():
+    s=pat_list()
+    print(s)
+    
+    r = input("Press 't' to do again\nOr press 'p' to go back\nPress 'x' to exit::")
+
+    if r.lower() == 't':
+        return pr_prompt()
 
     elif r.lower() == 'p':
         # return one to continue
@@ -205,12 +220,25 @@ while on:
         s = input(
             "Press 'v' to see current stock in pharmacy\nPress 'i' to issue medicine from pharmacy\n::")
         if s.lower() == 'v':
-            vpharm_prompt()
+            v=vpharm_prompt()
+            if v==1:
+                continue
+            elif v==0:
+                break
         elif s.lower() == 'i':
-            ipharm_prompt()
+            i=ipharm_prompt()
+            if v==1:
+                continue
+            elif v==0:
+                break
 
     elif select.lower() == 'r':
-        pr_prompt()
+        pat=pr_prompt()
+        if pat == 1:
+            continue
+        elif pat == 0:
+            break
+        
 
     elif select.lower() == 'b':
         bill_prompt()

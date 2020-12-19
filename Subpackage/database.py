@@ -126,11 +126,11 @@ def pat_list():
     return s
 
 
-def med_search(n):
+def med_search(name):
     conn = sqlite3.connect('HMS.db')
     c = conn.cursor()
 
-    c.execute("SELECT * FROM store WHERE name = (?)", n)
+    c.execute("SELECT * FROM store WHERE name = (?)", name)
 
     m = c.fetchall()
 
@@ -145,5 +145,5 @@ def med_search(n):
         Company += i[1]
         ExpiryDate += i[2]
         Price += i[4]
-    med = funcs.Medicine(Company, ExpiryDate, Name, Price)
+    med = Medicine(Company, ExpiryDate, Name, Price)
     return med
