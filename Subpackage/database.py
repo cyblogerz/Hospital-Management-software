@@ -1,5 +1,5 @@
 import sqlite3
-import Subpackage.funcs
+
 
 
 def add_store(med, stock):

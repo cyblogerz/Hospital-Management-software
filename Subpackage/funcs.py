@@ -1,4 +1,4 @@
-from Subpackage.database import *
+from  database import *
 
 
 # Hello, World I am Pranav I am new to python and I am trying to build this project with my basic knowledge in Python,
