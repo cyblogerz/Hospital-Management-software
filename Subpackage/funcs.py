@@ -1,5 +1,5 @@
 
-from database import *
+from Subpackage.database import *
 
 #Hello, World I am Pranav I am new to python and I am trying to build this project with my basic knowledge in Python,
 
@@ -73,17 +73,17 @@ def med_stor():
 def ex_prompt():
     n=input('Enter name of the medicine\n::')
     med=med_search(n)
-    stock=int(input('Enter stock quantity\n::')
+    stock=int(input('Enter stock quantity\n::'))
     stock_ex(med,stock)
     r=input("Press t to do again\nOr press p to go back\nPress x to exit::")
         
     if r.lower()=='t':
         ex_prompt()
     elif r.lower()=='p':
-        continue
+        pass
     elif r.lower() == 'x':
-        print(exiting...)
-        break
+        print("exiting...")
+        return
 
 def vstore_prompt():
     view_store()
@@ -93,10 +93,10 @@ def vstore_prompt():
         vstore_prompt()
     
     elif r.lower()=='p':
-        continue
+        pass
     elif r.lower() == 'x':
-        print(exiting...)
-        break
+        print("exiting...")
+        return
 
 def add_prompt():
     med=med_stor()
@@ -107,10 +107,10 @@ def add_prompt():
     if r.lower()=='t':
         add_prompt()
     elif r.lower()=='p':
-        continue
+        pass
     elif r.lower() == 'x':
-        print(exiting...)
-        break
+        print("exiting...")
+        return
 
 def vpharm_prompt():
     view_pharma()
@@ -120,10 +120,10 @@ def vpharm_prompt():
         vstore_prompt()
     
     elif r.lower()=='p':
-        continue
+        pass
     elif r.lower() == 'x':
-        print(exiting...)
-        break
+        print("exiting...")
+        return
 
 def ipharm_prompt():
     n=input('Enter medicine name\n::')
@@ -139,10 +139,10 @@ def pr_prompt():
         vstore_prompt()
     
     elif r.lower()=='p':
-        continue
+        pass
     elif r.lower() == 'x':
-        print(exiting...)
-        break
+        print("exiting...")
+        return
 
 def bill_prompt():
     print('This Feature will be coming soon')
@@ -156,7 +156,7 @@ on=True
 while on:
     select=input("Enter 'o' Outpatient\nEnter 's' for Managing store\nEnter 'p' for managing pharmacy\nEnter 'r' for viewing patient records Enter 'b' for billing\n::")
     if select.lower() == 'o':
-    register()
+        register()
     elif select.lower() == 's':
         s=input("Press 'v' to view current medicine stock\nPress 'e' to execute stock exchange\nPress 'a' to add medicine to store\n::")
         if s.lower() == 'v':
