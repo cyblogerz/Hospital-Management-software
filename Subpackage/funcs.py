@@ -1,6 +1,10 @@
 from Subpackage.database import *
 
+
 # Hello, World I am Pranav I am new to python and I am trying to build this project with my basic knowledge in Python,
+
+
+
 
 
 class Medicine:
@@ -71,6 +75,7 @@ def med_stor():
 
 
 def ex_prompt():
+
     n = input('Enter name of the medicine\n::')
     med = med_search(n)
     stock = int(input('Enter stock quantity\n::'))
@@ -146,6 +151,7 @@ def ipharm_prompt():
 
 def pr_prompt():
     pat_list()
+
     r = input("Press 't' to do again\nOr press 'p' to go back\nPress 'x' to exit::")
 
     if r.lower() == 't':
@@ -158,6 +164,8 @@ def pr_prompt():
         print("exiting...")
         # and zero to break
         return 0
+
+   
 
 
 def bill_prompt():
