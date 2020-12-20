@@ -155,11 +155,9 @@ def ipharm_prompt():
         return ipharm_prompt()
 
     elif r.lower() == 'p':
-        # return one to continue
         return 1
     elif r.lower() == 'x':
         print("exiting...")
-        # and zero to break
         return 0
 
 
@@ -186,8 +184,6 @@ def pr_prompt():
 def bill_prompt():
     print('This Feature will be coming soon')
 
-
-##########################################################
 print('*'*100+'\n'+'Welcome to hospital management System'.center(100, '*')+'\n'+'*'*100)
 
 on = True
