@@ -1,9 +1,5 @@
 # Hospital-Management-software
-<h1>This is a basic hospital management software with Python </h1>
-
-!!!!!!!!!!!!!!!!This Project isn't completed yet!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-Work in Progress>>>>>!!!!
+<h1>This is a Command Line Hospital Management software </h1>
 
 
  Language:Python<br>
