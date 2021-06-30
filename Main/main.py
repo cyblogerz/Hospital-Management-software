@@ -1,6 +1,6 @@
 """
 CHANGE LOG:
->> 29th June 2021
+>> 30th June 2021
 >> Removed redundant Code
 >> Restructured Code
 >> Shifted 2 Class(es) to database.py
