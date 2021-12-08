@@ -1,5 +1,9 @@
 from sqlite3 import connect
 from sqlite3.dbapi2 import Connection, Cursor
+import os
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+db_path = os.path.join(BASE_DIR, "HMS.db")
 
 
 class Medicine:
@@ -23,7 +27,7 @@ class Patient:
 
 
 def connect_cursor() -> tuple[Connection, Cursor]:
-    con: Connection = connect("HMS.db")
+    con: Connection = connect(db_path)
     cur: Cursor = con.cursor()
     return con, cur
 
