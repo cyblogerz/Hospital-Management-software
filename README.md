@@ -2,8 +2,8 @@
 
 ## This is a Command Line Hospital Management software
 
-Language: Python3
-Database with sqlite 3
+Language: Python
+Database with sqlite 
 
 Features:
 
