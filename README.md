@@ -23,7 +23,7 @@ Features:
 
 
 
-
+<hr>
 
 <em>Run the `main.py` file Located under the `Main` folder to run the program.</em>
 
